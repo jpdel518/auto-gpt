@@ -1,0 +1,15 @@
+FROM continuumio/miniconda3
+
+RUN mkdir /code
+COPY Auto-GPT /code/Auto-GPT
+WORKDIR /code
+
+# RUN ls -la
+
+# conda create
+RUN . /root/.bashrc && \
+    conda update -n base -c defaults conda && \
+    conda create -n auto-gpt python==3.10 && \
+    conda activate auto-gpt && \
+    pip install -r Auto-GPT/requirements.txt
+#    conda install fastapi -c conda-forge --override-channels
