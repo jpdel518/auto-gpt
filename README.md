@@ -1,10 +1,14 @@
 # 日本語化AutoGPT
 
 ## 概要
-AutoGPTは日本語の入力を行うことができるが、英語の回答が返ってくるため英語に精通していないと使いづらい問題がある。  
+AutoGPTは日本語の入力を行えるが、英語の回答が返ってくるため英語に精通していないと使いづらい問題がある。  
 このプロジェクトではAutoGPTからの回答を日本語に翻訳することで、日本語での入力・出力を可能にする。
 AutoGPTは下記リポジトリのstable v0.4.5を使用。
 https://github.com/Significant-Gravitas/Auto-GPT
+
+## 使う前の注意点
+M1 Macで動くようにDocker環境を作成しているので、それ以外の環境で動かす場合には
+Dockerfileの中に記述ある`From`から`--platform=linux/amd64`を削除して動かしてください。
 
 ## 使い方
 1. OpenAI APIの設定  
